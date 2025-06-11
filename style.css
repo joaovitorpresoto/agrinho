@@ -1,0 +1,294 @@
+/* Importação de fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&display=swap');
+
+/* Variáveis CSS para cores */
+:root {
+    --primary-color: #6a994e; /* Um verde mais natural */
+    --secondary-color: #a7c957; /* Verde mais claro */
+    --text-color: #333; /* Cinza escuro para texto */
+    --light-bg: #f5f5f5; /* Fundo cinza suave */
+    --white: #fff;
+    --dark-grey: #555;
+    --event-card-bg: #fff;
+    --btn-hover-color: #5b8744;
+    --border-color: #ddd;
+    --testimonial-bg: #e6ffe6; /* Fundo verde clarinho para depoimentos */
+    --featured-event-border: #FF8C00; /* Laranja mais vibrante para destaque */
+    --featured-event-shadow: rgba(255, 140, 0, 0.4); /* Sombra correspondente */
+}
+
+/* Reset básico e tipografia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+.ft1{
+margin-right: 10%;}
+h1, h2, h3 {
+    font-family: 'Lora', serif;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+h1 {
+    font-size: 3.2em;
+    text-align: center;
+    color: var(--white);
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--dark-grey);
+}
+
+h3 {
+    font-size: 1.8em;
+    color: var(--primary-color);
+}
+
+p {
+    margin-bottom: 18px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--btn-hover-color);
+    text-decoration: none;
+}
+
+.primary-btn {
+    background-color: var(--secondary-color);
+}
+
+.primary-btn:hover {
+    background-color: var(--primary-color);
+}
+
+
+/* Header */
+header {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+header p {
+    font-size: 1.3em;
+    opacity: 0.95;
+    margin-top: 10px;
+}
+
+/* Seções */
+section {
+    padding: 70px 0;
+}
+
+.section-padded {
+    background-color: var(--white);
+}
+
+.section-alt {
+    background-color: var(--light-bg);
+}
+
+/* Nova seção: Por Que Conectar Campo e Cidade */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.info-item {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    border-top: 5px solid var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateY(-5px);
+}
+
+.info-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--dark-grey);
+}
+
+/* Grade de Eventos */
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+    margin-top: 30px;
+}
+
+.event-card {
+    background-color: var(--event-card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.event-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.6em;
+}
+
+.event-card .event-date {
+    font-style: italic;
+    color: var(--dark-grey);
+    margin-bottom: 15px;
+    font-size: 0.95em;
+}
+
+.event-card p {
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+/* Estilo para o evento em destaque (novo) */
+.featured-event {
+    border: 3px solid var(--featured-event-border); /* Borda mais grossa e colorida */
+    box-shadow: 0 6px 20px var(--featured-event-shadow); /* Sombra correspondente */
+    transform: scale(1.02); /* Levemente maior */
+}
+
+.featured-event:hover {
+    transform: translateY(-10px) scale(1.03); /* Mais destaque no hover */
+    box-shadow: 0 10px 25px var(--featured-event-shadow);
+}
+
+.featured-event h3 {
+    color: var(--primary-color);
+}
+
+/* Nova seção: Depoimentos */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.testimonial-item {
+    background-color: var(--testimonial-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid var(--secondary-color);
+}
+
+.testimonial-item p {
+    font-style: italic;
+    margin-bottom: 15px;
+    color: var(--dark-grey);
+}
+
+.testimonial-item cite {
+    display: block;
+    text-align: right;
+    font-size: 0.9em;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-grey);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.8em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    .info-grid,
+    .event-grid,
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+    header p {
+        font-size: 1em;
+    }
+    h2 {
+        font-size: 1.6em;
+    }
+    .btn {
+        padding: 10px 20px;
+    }
+}
